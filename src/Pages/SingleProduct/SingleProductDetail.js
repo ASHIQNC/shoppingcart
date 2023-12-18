@@ -2,23 +2,18 @@ import React, { useEffect, useState } from "react";
 import "./singledetail.css";
 
 import { Link, useParams } from "react-router-dom";
+import { addToCartAsync, getSingleData } from "../../Redux/CartSlice";
+import { useDispatch, useSelector } from "react-redux";
 
 const SingleProductDetail = () => {
-  // create a state to hold data
-  const [singleData, setSingleData] = useState("");
   const { id } = useParams();
 
-  //   const singleFoodData = async () => {
-  //     const result = await getsingleFoodDetails(id);
-  //     // console.log("result", result);
-  //     setSingleData(result.data);
-  //   };
+  const dispatch = useDispatch();
+  const { allProducts } = useSelector((state) => state.cart);
 
-  //   console.log(singleData);
-
-  //   useEffect(() => {
-  //     singleFoodData();
-  //   }, []);
+  useEffect(() => {
+    dispatch(getSingleData(id));
+  }, []);
 
   return (
     <div className="single__page__wrapper">
@@ -31,23 +26,36 @@ const SingleProductDetail = () => {
         <div className="single__container__left-section">
           <img
             className="single__image__style"
-            src="https://i.postimg.cc/tRr1tP4P/iphone8.jpg"
+            src={allProducts?.image}
             alt="food"
           />
         </div>
         <div className="single__container__right-section">
-          <h6 className="mt-3 flavour-section__style">cat</h6>
+          {/* <h6 className="mt-3 flavour-section__style">cat</h6> */}
 
-          <h2 className="single__heading-style">name</h2>
-          <p className="single__para-style">discriot</p>
+          <h2 className="single__heading-style">{allProducts?.name}</h2>
+          <p className="single__para-style">{allProducts?.discription}</p>
 
           <div style={{ display: "flex" }}>
-            <h6 style={{ marginTop: "6px", marginRight: "17px" }}>$10000</h6>
-            <h4 style={{ color: "orangered" }}>$80.00</h4>
+            <h6
+              class="line-through"
+              style={{ marginTop: "6px", marginRight: "17px" }}>
+              {allProducts?.price}
+            </h6>
+            <h4 style={{ marginTop: "6px", color: "orangered" }}>
+              {allProducts?.price}
+            </h4>
           </div>
-          <Link to={"/menu"}>
-            <button className="single-page__button__style__wrapper">
-              View Our Menu
+
+          <p className="single__para-style">Warenty :{allProducts?.warenty}</p>
+
+          <Link to={"/cart"} style={{ textDecoration: "none" }}>
+            <button
+              onClick={() => {
+                dispatch(addToCartAsync(allProducts));
+              }}
+              className="single-page__button__style__wrapper">
+              Add To Cart
             </button>
           </Link>
         </div>

@@ -1,201 +1,60 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./home.css";
+import { fetchData } from "../../Redux/CartSlice";
+import { useDispatch, useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
 
 const Home = () => {
+  //creat an object for useDispatch
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+
+  //apicalling
+  const { allProducts, loading } = useSelector((state) => state.cart);
+  useEffect(() => {
+    dispatch(fetchData());
+  }, []);
+  console.log("product", allProducts);
+
+  const singleData = (id) => {
+    navigate(`detail/${id}`);
+  };
   return (
     <div>
       <div className="md:container md:mx-auto home__container__Wrapper">
         <div className="card__Wrapper  mx-2">
           {/* card1 */}
-          <div
-            id="t1"
-            class="max-w-sm rounded overflow-hidden shadow-lg single__card__style">
-            <img
-              class="w-full"
-              src="/img/card-top.jpg"
-              alt="Sunset in the mountains"
-            />
-            <div class="px-6 py-4">
-              <div class="font-bold text-xl mb-2">The Coldest Sunset</div>
-              <p class="text-gray-700 text-base">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Voluptatibus quia, nulla! Maiores et perferendis eaque,
-                exercitationem praesentium nihil.
-              </p>
-            </div>
-            <div class="px-6 pt-4 pb-2">
-              <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
-                #photography
-              </span>
-              <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
-                #travel
-              </span>
-              <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
-                #winter
-              </span>
-            </div>
-          </div>
 
-          <div class="max-w-sm rounded overflow-hidden shadow-lg single__card__style">
-            <img
-              class="w-full"
-              src="/img/card-top.jpg"
-              alt="Sunset in the mountains"
-            />
-            <div class="px-6 py-4">
-              <div class="font-bold text-xl mb-2">The Coldest Sunset</div>
-              <p class="text-gray-700 text-base">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Voluptatibus quia, nulla! Maiores et perferendis eaque,
-                exercitationem praesentium nihil.
-              </p>
+          {allProducts.length > 0 ? (
+            allProducts.map((data) => (
+              <div
+                onClick={() => {
+                  singleData(data.id);
+                }}
+                id="t1"
+                class="max-w-sm rounded overflow-hidden shadow-lg single__card__style">
+                <img
+                  class="w-full"
+                  style={{ height: "250px" }}
+                  src={data?.image}
+                  alt="Sunset in the mountains"
+                />
+                <div class="px-6 py-4">
+                  <div class="font-bold text-xl mb-2">{data?.name}</div>
+                  <p class="text-gray-700 text-base">
+                    {data?.discription?.length >= 40
+                      ? data.discription.slice(0, 40) + "..."
+                      : data.discription}
+                  </p>
+                  <div>{data?.price}</div>
+                </div>
+              </div>
+            ))
+          ) : (
+            <div className="p-5 my-5 text-center">
+              <i className="fa-solid fa-spinner fa-spin fa-4x p-5 my-5 "></i>
             </div>
-            <div class="px-6 pt-4 pb-2">
-              <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
-                #photography
-              </span>
-              <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
-                #travel
-              </span>
-              <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
-                #winter
-              </span>
-            </div>
-          </div>
-
-          <div class="max-w-sm rounded overflow-hidden shadow-lg single__card__style">
-            <img
-              class="w-full"
-              src="/img/card-top.jpg"
-              alt="Sunset in the mountains"
-            />
-            <div class="px-6 py-4">
-              <div class="font-bold text-xl mb-2">The Coldest Sunset</div>
-              <p class="text-gray-700 text-base">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Voluptatibus quia, nulla! Maiores et perferendis eaque,
-                exercitationem praesentium nihil.
-              </p>
-            </div>
-            <div class="px-6 pt-4 pb-2">
-              <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
-                #photography
-              </span>
-              <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
-                #travel
-              </span>
-              <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
-                #winter
-              </span>
-            </div>
-          </div>
-
-          <div class="max-w-sm rounded overflow-hidden shadow-lg single__card__style">
-            <img
-              class="w-full"
-              src="/img/card-top.jpg"
-              alt="Sunset in the mountains"
-            />
-            <div class="px-6 py-4">
-              <div class="font-bold text-xl mb-2">The Coldest Sunset</div>
-              <p class="text-gray-700 text-base">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Voluptatibus quia, nulla! Maiores et perferendis eaque,
-                exercitationem praesentium nihil.
-              </p>
-            </div>
-            <div class="px-6 pt-4 pb-2">
-              <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
-                #photography
-              </span>
-              <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
-                #travel
-              </span>
-              <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
-                #winter
-              </span>
-            </div>
-          </div>
-
-          <div class="max-w-sm rounded overflow-hidden shadow-lg single__card__style">
-            <img
-              class="w-full"
-              src="/img/card-top.jpg"
-              alt="Sunset in the mountains"
-            />
-            <div class="px-6 py-4">
-              <div class="font-bold text-xl mb-2">The Coldest Sunset</div>
-              <p class="text-gray-700 text-base">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Voluptatibus quia, nulla! Maiores et perferendis eaque,
-                exercitationem praesentium nihil.
-              </p>
-            </div>
-            <div class="px-6 pt-4 pb-2">
-              <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
-                #photography
-              </span>
-              <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
-                #travel
-              </span>
-              <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
-                #winter
-              </span>
-            </div>
-          </div>
-
-          <div class="max-w-sm rounded overflow-hidden shadow-lg single__card__style">
-            <img
-              class="w-full"
-              src="/img/card-top.jpg"
-              alt="Sunset in the mountains"
-            />
-            <div class="px-6 py-4">
-              <div class="font-bold text-xl mb-2">The Coldest Sunset</div>
-              <p class="text-gray-700 text-base">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Voluptatibus quia, nulla! Maiores et perferendis eaque,
-                exercitationem praesentium nihil.
-              </p>
-            </div>
-            <div class="px-6 pt-4 pb-2">
-              <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
-                #photography
-              </span>
-              <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
-                #travel
-              </span>
-              <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
-                #winter
-              </span>
-            </div>
-          </div>
-          <div class="max-w-sm rounded overflow-hidden shadow-lg single__card__style">
-            <img
-              class="w-full"
-              src="/img/card-top.jpg"
-              alt="Sunset in the mountains"
-            />
-            <div class="px-6 py-4">
-              <div class="font-bold text-xl mb-2">The Coldest Sunset</div>
-              <p class="text-gray-700 text-base">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Voluptatibus quia, nulla! Maiores et perferendis eaque,
-                exercitationem praesentium nihil.
-              </p>
-            </div>
-            <div class="px-6 pt-4 pb-2">
-              <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
-                #photography
-              </span>
-              <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
-                #travel
-              </span>
-              <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
-                #winter
-              </span>
-            </div>
-          </div>
+          )}
         </div>
       </div>
     </div>
