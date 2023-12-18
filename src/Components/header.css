@@ -12,8 +12,30 @@
 .cart__icon__wrapper:hover {
   color: black;
 }
+.logo__style {
+  height: 52px;
+  margin-top: -13px;
+}
+.logo__heading__style {
+  font-size: 26px;
+  color: red;
+  margin-top: -12px;
+}
+.logo__wrapper {
+  cursor: pointer;
+}
+.logo__heading__style:hover {
+  color: black;
+}
 @media only screen and (max-width: 600px) {
-  .home__nav__Style {
-    margin-left: 20px;
+  .logo__style {
+    height: 44px;
+    margin-top: -2px;
+  }
+
+  .logo__heading__style {
+    font-size: 17px;
+    margin-top: 0px;
+    margin-right: 10px;
   }
 }

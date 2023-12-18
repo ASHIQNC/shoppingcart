@@ -46,18 +46,22 @@ const Header = () => {
               </button>
             </div> */}
             <div class="flex flex-1 items-center  sm:items-stretch sm:justify-start">
-              <div class="flex flex-shrink-0 items-center">
+              <div class="flex flex-shrink-0 items-center logo__wrapper">
                 <img
-                  class="h-8 w-auto"
-                  src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
+                  className="w-auto logo__style"
+                  src="https://i.postimg.cc/Z5jXW7F3/7ce8813b5f2f761b12676436e3618155-removebg-preview.png"
                   alt="Your Company"
                 />
+
+                <h1 className="mx-2 logo__heading__style">Shoppy</h1>
               </div>
               <div class=" sm:ml-6 sm:block">
                 <div class="flex space-x-4 home__nav__Style ">
-                  <Link to={"/"} style={{ textDecoration: "none" }}>
+                  <Link
+                    to={"/"}
+                    style={{ textDecoration: "none", marginTop: "5px" }}>
                     <a
-                      class=" rounded-md px-3 py-2 text-sm font-medium "
+                      class=" rounded-md px-3 py-2 text-md font-medium "
                       aria-current="page">
                       Home
                     </a>
