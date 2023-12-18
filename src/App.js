@@ -1,21 +1,27 @@
+import React, { Suspense } from "react";
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
 import Header from "./Components/Header";
-import Home from "./Pages/Home/Home";
-import Cart from "./Pages/Cart/Cart";
-import SingleProductDetail from "./Pages/SingleProduct/SingleProductDetail";
 
+// lazyloading
+const LazyHome = React.lazy(() => import("./Pages/Home/Home"));
+const LazyCart = React.lazy(() => import("./Pages/Cart/Cart"));
+const LazySingleDetail = React.lazy(() =>
+  import("./Pages/SingleProduct/SingleProductDetail")
+);
 function App() {
   return (
     <div>
       <Header></Header>
-      <Routes>
-        <Route path="/" element={<Home></Home>}></Route>
-        <Route path="cart" element={<Cart></Cart>}></Route>
-        <Route
-          path="detail/:id"
-          element={<SingleProductDetail></SingleProductDetail>}></Route>
-      </Routes>
+      <Suspense fallback={"loading"}>
+        <Routes>
+          <Route path="/" element={<LazyHome></LazyHome>}></Route>
+          <Route path="cart" element={<LazyCart></LazyCart>}></Route>
+          <Route
+            path="detail/:id"
+            element={<LazySingleDetail></LazySingleDetail>}></Route>
+        </Routes>
+      </Suspense>
     </div>
   );
 }
