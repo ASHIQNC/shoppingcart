@@ -40,13 +40,15 @@ const Home = () => {
                   alt="Sunset in the mountains"
                 />
                 <div class="px-6 py-4">
-                  <div class="font-bold text-xl mb-2">{data?.name}</div>
-                  <p class="text-gray-700 text-base">
+                  <div class="font-bold text-xl mb-2 text-red-700">
+                    {data?.name}
+                  </div>
+                  <p class="text-red-700 text-base">
                     {data?.discription?.length >= 40
                       ? data.discription.slice(0, 40) + "..."
                       : data.discription}
                   </p>
-                  <div>{data?.price}</div>
+                  <div className="text-red-700">${data?.price}</div>
                 </div>
               </div>
             ))

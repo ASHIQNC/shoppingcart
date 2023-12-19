@@ -12,15 +12,17 @@ const Header = () => {
         <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
           <div class="relative flex h-16 items-center justify-between">
             <div class="flex flex-1 items-center  sm:items-stretch sm:justify-start">
-              <div class="flex flex-shrink-0 items-center logo__wrapper">
-                <img
-                  className="w-auto logo__style"
-                  src="https://i.postimg.cc/Z5jXW7F3/7ce8813b5f2f761b12676436e3618155-removebg-preview.png"
-                  alt="Your Company"
-                />
+              <Link to={"/"} style={{ textDecoration: "none" }}>
+                <div class="flex flex-shrink-0 items-center logo__wrapper">
+                  <img
+                    className="w-auto logo__style"
+                    src="https://i.postimg.cc/Z5jXW7F3/7ce8813b5f2f761b12676436e3618155-removebg-preview.png"
+                    alt="Your Company"
+                  />
 
-                <h1 className="mx-2 logo__heading__style">Shoppy</h1>
-              </div>
+                  <h1 className="mx-2 logo__heading__style">Shoppy</h1>
+                </div>
+              </Link>
               <div class=" sm:ml-6 sm:block">
                 <div class="flex space-x-4 home__nav__Style ">
                   <Link
