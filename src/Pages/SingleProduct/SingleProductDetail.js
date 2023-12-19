@@ -31,8 +31,6 @@ const SingleProductDetail = () => {
           />
         </div>
         <div className="single__container__right-section">
-          {/* <h6 className="mt-3 flavour-section__style">cat</h6> */}
-
           <h2 className="single__heading-style">{allProducts?.name}</h2>
           <p className="single__para-style">{allProducts?.discription}</p>
 

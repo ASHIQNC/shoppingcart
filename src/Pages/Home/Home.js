@@ -5,7 +5,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 
 const Home = () => {
-  //creat an object for useDispatch
+  //create an object for useDispatch
   const dispatch = useDispatch();
   const navigate = useNavigate();
 

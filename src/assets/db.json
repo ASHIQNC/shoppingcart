@@ -12,7 +12,7 @@
       "vendorname": "apple corp",
       "warenty": 1,
       "shippingestimate": "$5.00",
-      "taxextimate": "$8.32"
+      "taxestimate": "$8.32"
     },
     {
       "id": 2,
@@ -26,7 +26,7 @@
       "vendorname": "apple corp",
       "warenty": "1",
       "shippingestimate": "$6.00",
-      "taxextimate": "$5.32"
+      "taxestimate": "$5.32"
     },
     {
       "id": 3,
@@ -40,7 +40,7 @@
       "vendorname": "apple corp",
       "warenty": 2,
       "shippingestimate": "$7.00",
-      "taxextimate": "$8.32"
+      "taxestimate": "$8.32"
     },
     {
       "id": 4,
@@ -54,7 +54,7 @@
       "vendorname": "samsung",
       "warenty": 2,
       "shippingestimate": "$7.00",
-      "taxextimate": "$8.32"
+      "taxestimate": "$8.32"
     },
     {
       "id": 5,
@@ -68,7 +68,7 @@
       "vendorname": "samsung",
       "warenty": 2,
       "shippingestimate": "$7.00",
-      "taxextimate": "$8.32"
+      "taxestimate": "$8.32"
     },
     {
       "id": 6,
@@ -82,7 +82,7 @@
       "vendorname": "samsung",
       "warenty": 1,
       "shippingestimate": "$7.00",
-      "taxextimate": "$8.32"
+      "taxestimate": "$8.32"
     },
     {
       "id": 7,
@@ -96,7 +96,7 @@
       "vendorname": "oppo",
       "warenty": 1,
       "shippingestimate": "$7.00",
-      "taxextimate": "$8.32"
+      "taxestimate": "$8.32"
     },
     {
       "id": 8,
@@ -110,7 +110,7 @@
       "vendorname": "oppo",
       "warenty": 1,
       "shippingestimate": "$7.00",
-      "taxextimate": "$8.32"
+      "taxestimate": "$8.32"
     },
     {
       "id": 9,
@@ -124,7 +124,7 @@
       "vendorname": "oppo",
       "warenty": 1,
       "shippingestimate": "$7.00",
-      "taxextimate": "$8.32"
+      "taxestimate": "$8.32"
     },
     {
       "id": 10,
@@ -138,7 +138,7 @@
       "vendorname": "oppo",
       "warenty": 1,
       "shippingestimate": "$7.00",
-      "taxextimate": "$8.32"
+      "taxestimate": "$8.32"
     },
     {
       "id": "11",
@@ -152,7 +152,7 @@
       "vendorname": "applecorp",
       "warenty": "1",
       "shippingestimate": "$7.00",
-      "taxextimate": "$8.32"
+      "taxestimate": "$8.32"
     },
     {
       "id": "22",
@@ -166,7 +166,7 @@
       "vendorname": "samsung corp",
       "warenty": "1",
       "shippingestimate": "$7.00",
-      "taxextimate": "$8.32"
+      "taxestimate": "$8.32"
     }
   ]
 }

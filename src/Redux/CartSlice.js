@@ -81,19 +81,12 @@ const cartSlice = createSlice({
     //evide state nammale initial state aanu
 
     builder.addCase(addToCartAsync.fulfilled, (state, action) => {
-      console.log("Payload received:", action.payload);
       state.cartData.push(action.payload); // Add the item to the cart
-      console.log("Updated state:", state); // Add the item to the cart
     });
 
     //remove from cart
     builder.addCase(removeFromCart.fulfilled, (state, action) => {
-      console.log("Payload received:", action.payload);
       const itemIdToRemove = action.payload;
-
-      console.log("jjj", itemIdToRemove);
-      //ee id ulla data mathram remove aayitt bakki ullath kittum
-      //vere array aanu return cheyunnath athond kodukande aavishyam ellaa
       state.cartData = state.cartData.filter(
         (item) => item.id !== itemIdToRemove
       );
