@@ -1,5 +1,5 @@
 # ShoppingCart
- This project focuses on the development of Dashboard using Reactjs Library
+ This project focuses on the development of ShoppingCart using Reactjs Library
 
 # Table of contents
 - General info
