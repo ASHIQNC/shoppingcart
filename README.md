@@ -1,70 +1,64 @@
-# Getting Started with Create React App
+# ShoppingCart
+ This project focuses on the development of Dashboard using Reactjs Library
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Table of contents
+- General info
+- Technologies
+- Setup
+- Screenshots
 
-## Available Scripts
+# General info
+Application is developed to showcase a Ecommerse using dummy data. The app layout is made responsive to work for different screen resolutions. This is achieved using Reactjs,css,mediaquery,tailwind css,json-server
 
-In the project directory, you can run:
+# Technologies
+Project is created with:
 
-### `npm start`
+HTML5
+CSS4
+tailwind css,
+Reactjs,
+Json-server
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Setup
+To run this project:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- Clone the repository
+- Type "npm install" inorder to get the nodemodule file
+- After installing nodemodule type "npm start" to run the application
+- To run json server for getting the dummy data
+- Steps:Take another terminal, go to shoppingcart > src >assets > npx json-server --watch db.json --port 4000
+- The above code will run the json server
 
-### `npm test`
+# Screenshots
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1.
+![Capture2](https://github.com/ASHIQNC/shoppingcart/assets/81138318/67f975d5-7ba9-4765-aa35-aba3feea12db)
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+2.
+![Capture3](https://github.com/ASHIQNC/shoppingcart/assets/81138318/1aabf462-c55e-4f82-ace6-3c564ffe1b4c)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+3.
+![Capture4](https://github.com/ASHIQNC/shoppingcart/assets/81138318/fc46398d-906f-4b99-953a-3598dd6489b2)
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+4.
+![Capture5](https://github.com/ASHIQNC/shoppingcart/assets/81138318/9ec5ae19-e3de-414f-b8c4-ea9d551264be)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+5.
+![Capture6](https://github.com/ASHIQNC/shoppingcart/assets/81138318/5806bb20-932c-4bed-9adc-a6b51d880f2d)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+6.
+![mob1](https://github.com/ASHIQNC/shoppingcart/assets/81138318/f6402bb8-6313-4586-acb0-39a58e38b193)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+7.
+![mob2](https://github.com/ASHIQNC/shoppingcart/assets/81138318/5c97c97f-0656-4225-a56f-8f5507a19ddc)
 
-## Learn More
+8.
+![mob3](https://github.com/ASHIQNC/shoppingcart/assets/81138318/7cd9675f-549c-41b1-a5a5-2b4b05f147ee)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+9.
+![Capture1](https://github.com/ASHIQNC/shoppingcart/assets/81138318/f32f5042-2a8f-4979-ba5a-ec38a3aeccc9)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
